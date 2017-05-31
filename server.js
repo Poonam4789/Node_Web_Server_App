@@ -3,7 +3,7 @@ const express = require('express');
 const fs = require('fs');
 // const beautify = require("json-beautify");
 const hbs = require('hbs');
-const port = process.env.PORT|3000;
+const port = process.env.PORT||3000;
 console.log("port = ", process.env.PORT);
 
 var app = express();
