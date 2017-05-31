@@ -1,8 +1,10 @@
+
 const express = require('express');
 const fs = require('fs');
 // const beautify = require("json-beautify");
 const hbs = require('hbs');
 const _port = process.env.port |3000;
+console.log(_port);
 
 var app = express();
 
