@@ -3,8 +3,8 @@ const express = require('express');
 const fs = require('fs');
 // const beautify = require("json-beautify");
 const hbs = require('hbs');
-const _port = process.env.port |3000;
-console.log(_port);
+const port = process.env.PORT|3000;
+console.log("port = ", process.env.PORT);
 
 var app = express();
 
@@ -65,6 +65,6 @@ app.get('/bad', (req, res) => {
         errorMessage: 'Error Page!'
     });
 });
-app.listen(_port, () => {
-    console.log(`Server stated listening to port ${_port}`);
+app.listen(port, () => {
+    console.log(`Server stated listening to port ${port}`);
 });
