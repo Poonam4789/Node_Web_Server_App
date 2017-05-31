@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 // const beautify = require("json-beautify");
 const hbs = require('hbs');
+const _port = process.env.port |3000;
 
 var app = express();
 
@@ -27,10 +28,10 @@ if(err){
 });
 });
 
-app.use((req,res,next)=>{
-res.render('maintanance.hbs');  
+// app.use((req,res,next)=>{
+// res.render('maintanance.hbs');  
 
-});
+// });
 
 app.use(express.static(__dirname + '/public'));
 app.get('/', (req, res) => {
@@ -62,6 +63,6 @@ app.get('/bad', (req, res) => {
         errorMessage: 'Error Page!'
     });
 });
-app.listen(3000, () => {
-    console.log("Server stated listening to port 3000");
+app.listen(_port, () => {
+    console.log(`Server stated listening to port ${_port}`);
 });
