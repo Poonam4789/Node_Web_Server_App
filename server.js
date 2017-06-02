@@ -59,6 +59,7 @@ app.get('/about', (req, res) => {
         // year: new Date().getFullYear()
     });
 });
+
 app.get('/project', (req, res) => {
     // res.send("how about you!");
     res.render('project.hbs', {
